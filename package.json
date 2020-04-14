@@ -7,9 +7,10 @@
     "build:prod": "webpack -p --env production",
     "serve": "live-server --open=/public",
     "devserver": "webpack-dev-server",
-    "start": "npm-run-all --parallel devserver build",
     "test": "jest --config=jest.config.json",
-    "test:w": "jest --config=jest.config.json --watchAll"
+    "test:w": "jest --config=jest.config.json --watchAll",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -38,6 +39,7 @@
   "main": "index.js",
   "dependencies": {
     "enzyme-to-json": "^3.4.4",
+    "express": "^4.17.1",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
