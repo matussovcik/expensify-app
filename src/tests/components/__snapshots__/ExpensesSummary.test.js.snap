@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should get 1 expense and its amount 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     totalling: 
+    193
+    .
+  </p>
+</div>
+`;
+
+exports[`should get correct number of expenses viewed and the total amount 1`] = `
+<div>
+  <p>
+    Viewing 
+    3
+     
+    expenses
+     totalling: 
+    19175217
+    .
+  </p>
+</div>
+`;
