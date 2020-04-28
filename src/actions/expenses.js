@@ -25,13 +25,26 @@ export const startAddExpense = (expenseData = {}) => {
   };
 };
 
-// remove expense
+// REMOVE_EXPENSE
 export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
   id
 });
 
-// edit expense
+export const startRemoveExpense = ({ id }) => {
+  return (dispatch) => {
+    return database.ref(`expenses/${id}`)
+      .remove()
+      .then(() => {
+        dispatch(removeExpense({ id }));
+      })
+      .catch((error) => {
+        console.log('removing unsuccessful');
+      });
+  };
+};
+
+// EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
   id,
@@ -56,7 +69,6 @@ export const startSetExpenses = () => {
             ...childSnapshot.val()
           });
         });
-        console.log('Data fetched', expenses);
         dispatch(setExpenses(expenses));  
     }).catch((error) => {
       console.log('Error fetching data.', error);
