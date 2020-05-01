@@ -1,29 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should get 1 expense and its amount 1`] = `
-<div>
-  <p>
-    Viewing 
-    1
-     
-    expense
-     totalling: 
-    $1.93
-    .
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing
+      <span>
+         
+        1
+         
+      </span>
+      expense
+       totalling:
+      <span>
+         
+        $1.93
+      </span>
+      .
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="btn"
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should get correct number of expenses viewed and the total amount 1`] = `
-<div>
-  <p>
-    Viewing 
-    3
-     
-    expenses
-     totalling: 
-    $191,752.17
-    .
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing
+      <span>
+         
+        3
+         
+      </span>
+      expenses
+       totalling:
+      <span>
+         
+        $191,752.17
+      </span>
+      .
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="btn"
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
